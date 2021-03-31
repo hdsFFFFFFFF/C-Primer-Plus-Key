@@ -1,8 +1,9 @@
 #include <stdio.h>
+#define DAYS_PER_YEAR	365
 
 int trans_year_to_days(int years)
 {
-	return years * 365;
+	return years * DAYS_PER_YEAR;
 }
 
 int main()

@@ -1,13 +1,15 @@
 #include <stdio.h>
+#define SURNAME "he"
+#define NAME	"dongsheng"
 
 int main()
 {
-	printf("he dongsheng\n");
+	printf("%s %s\n", SURNAME, NAME);
 
-	printf("he\ndongsheng\n");
+	printf("%s\n%s\n", SURNAME, NAME);
 
-	printf("he");
-	printf("dongsheng\n");
+	printf("%s", SURNAME);
+	printf("%s\n", NAME);
 	
 	return 0;
 }
