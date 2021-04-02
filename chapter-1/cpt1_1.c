@@ -31,7 +31,7 @@ start:
 	char select = 'y';
 	float inch_val;
 	
-	while (select == 'y') {
+	do {
 		printf("Please input the inch value:\n");
 
 		scanf("%f", &inch_val);
@@ -48,7 +48,7 @@ start:
 			select = 'n';
 			fflush(stdin);
 		}
-	}
+	} while (select == 'y');
 
 	return 0;
 }
