@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-void inch_into_cm(float *value)
+double inch_into_cm(float value)
 {
-	*value *= 2.54;
+	return value *= 2.54;
 }
 
 int main()
 {
+	/*
 start:
 	printf("Please input the inch value:\n");
 
@@ -25,6 +26,29 @@ start:
 	scanf("%c", &select);
 	if (select == 'y')
 		goto start;
+	*/
+
+	char select = 'y';
+	float inch_val;
+	
+	while (select == 'y') {
+		printf("Please input the inch value:\n");
+
+		scanf("%f", &inch_val);
+		fflush(stdin);
+		
+		double ret = inch_into_cm(inch_val);
+		printf("%lf\n", ret);
+
+		
+		printf("Please input 'y' to goon, other to exit.\n");
+	
+		getchar();
+		if (getchar() != 'y') {
+			select = 'n';
+			fflush(stdin);
+		}
+	}
 
 	return 0;
 }
